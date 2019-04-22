@@ -20,16 +20,15 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
  
 @SpringBootApplication
  
-@EnableAutoConfiguration(exclude = { //  
-        DataSourceAutoConfiguration.class, //
-        DataSourceTransactionManagerAutoConfiguration.class, //
+@EnableAutoConfiguration(exclude = {  
+        DataSourceAutoConfiguration.class,
+        DataSourceTransactionManagerAutoConfiguration.class,
         HibernateJpaAutoConfiguration.class })
  
 public class SbHibernateShoppingCartApplication {
  
     @Autowired
     private Environment env;
-     
      
     public static void main(String[] args) {
         SpringApplication.run(SbHibernateShoppingCartApplication.class, args);
